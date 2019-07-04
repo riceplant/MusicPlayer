@@ -47,6 +47,12 @@ class AlbumTableViewController: UITableViewController {
         return cell
     }
     
+    // Deselect Row when clicked
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // MARK: Private Methods
     
     private func loadSampleAlbums() {
