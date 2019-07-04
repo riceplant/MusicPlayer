@@ -15,9 +15,10 @@ class Album {
     var albumCover: UIImage
     var albumName: String
     
+    
     // MARK: Initilization
     
-    init?(cover: UIImage?, name: String) {
+    init?(cover: UIImage?, name: String, artist: String? = nil) {
         
         // The name must not be empy
         
