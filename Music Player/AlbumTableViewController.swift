@@ -13,6 +13,7 @@ class AlbumTableViewController: UITableViewController {
     // MARK: Properties
     
     var albums = [Album]()
+    let allAlbums = AlbumList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ class AlbumTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of AlbumTableViewCell.")
         }
         
-        // Fetches the appropriate meal for the data source layout.
+        // Fetches the appropriate album for the data source layout.
         let album = albums[indexPath.row]
         
         cell.albumCoverImageView.image = album.albumCover
@@ -57,23 +58,14 @@ class AlbumTableViewController: UITableViewController {
     
     private func loadSampleAlbums() {
         
-        let cover1 = UIImage(named: "tropical_beats")
-        let cover2 = UIImage(named: "summer_chill")
-        let cover3 = UIImage(named: "vibe_guide")
+        let albumList: AlbumList = AlbumList.init()
         
-        guard let album1 = Album(cover: cover1, name: "Tropical Beats") else {
-            fatalError("Unable to instantiate album1")
+        for index in 0..<albumList.travel.count {
+            
+            albums += [albumList.travel[index]]
+            
         }
-        
-        guard let album2 = Album(cover: cover2, name: "Summer Chill") else {
-            fatalError("Unable to instantiate album2")
-        }
-        
-        guard let album3 = Album(cover: cover3, name: "Vibe Guide") else {
-            fatalError("Unable to instantiate album3")
-        }
-        
-        albums += [album1, album2, album3]
+               
     }
 
 }
