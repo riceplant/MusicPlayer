@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XeB-d3-udR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cus-bt-Ncp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,35 +19,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chill_image" translatesAutoresizingMaskIntoConstraints="NO" id="91w-iG-B7Q">
-                                <rect key="frame" x="0.0" y="20" width="375" height="215.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="201.00000000000006"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travel_image" translatesAutoresizingMaskIntoConstraints="NO" id="L3r-3H-JMa">
-                                <rect key="frame" x="0.0" y="235.5" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="265" width="375" height="201"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_music_image" translatesAutoresizingMaskIntoConstraints="NO" id="KrL-OH-2me">
-                                <rect key="frame" x="0.0" y="451.5" width="375" height="215.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_music_image" translatesAutoresizingMaskIntoConstraints="NO" id="KrL-OH-2me">
+                                <rect key="frame" x="0.0" y="466" width="375" height="201"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chill Music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWR-cC-Un4">
-                                <rect key="frame" x="80" y="108" width="214" height="39"/>
+                                <rect key="frame" x="80" y="145" width="214" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Travel Music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZU-EB-jzc">
-                                <rect key="frame" x="80" y="324" width="214" height="39"/>
+                                <rect key="frame" x="80" y="346" width="214" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0f-wG-hyw">
-                                <rect key="frame" x="80" y="540" width="214" height="39"/>
+                                <rect key="frame" x="80" y="547" width="214" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-Jn-Eon">
+                                <rect key="frame" x="0.0" y="265" width="375" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="XeB-d3-udR" kind="show" id="6sv-Oj-H7k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-Mp-xOt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="TJZ-Ki-G2k" kind="show" id="Is8-tP-OPY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -70,10 +84,69 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1vn-IG-XdP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1077.5999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Chill Music-->
+        <scene sceneID="MqR-QL-BdB">
+            <objects>
+                <tableViewController id="TJZ-Ki-G2k" customClass="ChillMusicTableViewController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8iO-uO-cxz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChillAlbumTableViewCell" rowHeight="90" id="el1-Yx-jcK" customClass="ChillMusicTableViewCell" customModule="Music_Player" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="el1-Yx-jcK" id="xm9-DI-UNj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noPhotoImage" translatesAutoresizingMaskIntoConstraints="NO" id="uqh-a0-jje">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="E7Z-UM-z6Y"/>
+                                                <constraint firstAttribute="width" constant="90" id="v24-63-d0g"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGh-uz-Od8">
+                                            <rect key="frame" x="98" y="11" width="277" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uqh-a0-jje" firstAttribute="leading" secondItem="xm9-DI-UNj" secondAttribute="leading" id="8GT-eU-Kfk"/>
+                                        <constraint firstItem="uqh-a0-jje" firstAttribute="leading" secondItem="xm9-DI-UNj" secondAttribute="leading" id="CrJ-RT-dA7"/>
+                                        <constraint firstItem="uqh-a0-jje" firstAttribute="leading" secondItem="xm9-DI-UNj" secondAttribute="leading" id="SVN-nj-FIm"/>
+                                        <constraint firstAttribute="bottom" secondItem="uqh-a0-jje" secondAttribute="bottom" id="XRD-vf-39v"/>
+                                        <constraint firstItem="uqh-a0-jje" firstAttribute="top" secondItem="xm9-DI-UNj" secondAttribute="top" id="aF3-4M-tGP"/>
+                                        <constraint firstItem="uqh-a0-jje" firstAttribute="top" secondItem="xm9-DI-UNj" secondAttribute="top" id="s6E-iv-vtt"/>
+                                        <constraint firstItem="uqh-a0-jje" firstAttribute="top" secondItem="xm9-DI-UNj" secondAttribute="top" id="uBy-80-H8C"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="chillAlbumCoverImageVIew" destination="uqh-a0-jje" id="2ID-kD-I3p"/>
+                                    <outlet property="chillAlbumNameLabel" destination="KGh-uz-Od8" id="XfA-Ek-D8e"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TJZ-Ki-G2k" id="zJK-GU-DOd"/>
+                            <outlet property="delegate" destination="TJZ-Ki-G2k" id="8HL-fY-RAz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chill Music" id="CxK-NX-Ws5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYD-Mo-xXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.5999999999999" y="-581.55922038980509"/>
         </scene>
         <!--Album Table View Controller-->
         <scene sceneID="v8a-sE-npZ">
@@ -115,10 +188,29 @@
                             <outlet property="delegate" destination="XeB-d3-udR" id="RCd-4T-ACq"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Travel Music" id="cfp-Ar-Z60"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qq7-6O-K9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="139.880059970015"/>
+            <point key="canvasLocation" x="1975" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jUg-fn-O6Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cus-bt-Ncp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xXh-jU-KAs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NVa-ql-JYb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zK5-ls-yeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

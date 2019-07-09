@@ -1,19 +1,19 @@
 //
-//  AlbumTableViewCell.swift
+//  ChillMusicTableViewCell.swift
 //  Music Player
 //
-//  Created by Binh Phan on 04.07.19.
+//  Created by Binh Phan on 09.07.19.
 //  Copyright © 2019 Binh Phan. All rights reserved.
 //
 
 import UIKit
 
-class AlbumTableViewCell: UITableViewCell {
+class ChillMusicTableViewCell: UITableViewCell {
 
-    // MARK: Properties
+    //Mark: Properties
     
-    @IBOutlet weak var albumNameLabel: UILabel!
-    @IBOutlet weak var albumCoverImageView: UIImageView!
+    @IBOutlet weak var chillAlbumCoverImageVIew: UIImageView!
+    @IBOutlet weak var chillAlbumNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
