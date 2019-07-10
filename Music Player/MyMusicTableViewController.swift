@@ -1,29 +1,32 @@
 //
-//  ChillMusicTableViewController.swift
+//  MyMusicTableViewController.swift
 //  Music Player
 //
-//  Created by Binh Phan on 08.07.19.
+//  Created by Binh Phan on 09.07.19.
 //  Copyright © 2019 Binh Phan. All rights reserved.
 //
 
 import UIKit
 
-class ChillMusicTableViewController: UITableViewController {
+class MyMusicTableViewController: UITableViewController {
 
     // MARK: Properties
     
     var albums = [Album]()
     let allAlbums = AlbumList()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadSampleAlbums()
+        
+        tableView.dataSource = self
+                
+        loadSampleAlbum()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 1
     }
 
@@ -35,17 +38,18 @@ class ChillMusicTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellIdentifier = "ChillAlbumTableViewCell"
+        let cellIdentifier = "MyMusicTableViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ChillMusicTableViewCell else {
-            fatalError("The dequeued cell is not an instance of ChillAlbumTableViewCell.")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MyMusicTableViewCell else {
+            fatalError("The dequeued cell is not an instance of myMusicTableViewCell.")
         }
-        
+
         // Fetches the appropriate album for the data source layout.
         let album = albums[indexPath.row]
-
-        cell.chillAlbumCoverImageVIew.image = album.albumCover
-        cell.chillAlbumNameLabel.text = album.albumName
+        
+        cell.myMusicCoverImageView.image = album.albumCover
+        cell.myMusicNameLabel.text = album.albumName
+        cell.myMusicArtistLabel.text = album.albumArtist
         
         return cell
     }
@@ -60,15 +64,15 @@ class ChillMusicTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    //MARK: Private Methods
-    
-    private func loadSampleAlbums() {
+    // Mark: Private Methods
+ 
+    private func loadSampleAlbum() {
         
         let albumList: AlbumList = AlbumList.init()
         
-        for index in 0..<albumList.chill.count {
+        for index in 0..<albumList.myMusic.count {
             
-            albums += [albumList.chill[index]]
+            albums += [albumList.myMusic[index]]
         }
         
     }

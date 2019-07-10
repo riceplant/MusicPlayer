@@ -14,6 +14,7 @@ class Album {
     
     var albumCover: UIImage
     var albumName: String
+    var albumArtist: String?
     
     
     // MARK: Initilization
@@ -28,5 +29,9 @@ class Album {
         
         albumCover = cover!
         albumName = name
+        
+        if artist != nil {
+            albumArtist = artist
+        }
     }
 }
