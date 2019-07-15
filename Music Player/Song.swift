@@ -13,7 +13,7 @@ class Song {
     
     var songTitle: String
     var songArtist: String
-    var songCover: UIImage?
+    var songCover: UIImage
     
     init(title: String, artist: String, cover: UIImage?) {
         

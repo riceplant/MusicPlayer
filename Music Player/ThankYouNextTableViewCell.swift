@@ -9,6 +9,13 @@
 import UIKit
 
 class ThankYouNextTableViewCell: UITableViewCell {
+    
+    // Mark: Properties
+    @IBOutlet weak var songCoverImageView: UIImageView!
+    @IBOutlet weak var songNameLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
