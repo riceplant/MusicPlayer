@@ -1,0 +1,16 @@
+PODS:
+  - Toast-Swift (5.0.0)
+
+DEPENDENCIES:
+  - Toast-Swift (~> 5.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+
+PODFILE CHECKSUM: e7d0f0ca7f1bee8a44a05a5f4ca1156fb66fb25f
+
+COCOAPODS: 1.7.3

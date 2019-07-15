@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chill_image" translatesAutoresizingMaskIntoConstraints="NO" id="91w-iG-B7Q">
-                                <rect key="frame" x="0.0" y="64" width="375" height="201.00000000000006"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="201"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travel_image" translatesAutoresizingMaskIntoConstraints="NO" id="L3r-3H-JMa">
                                 <rect key="frame" x="0.0" y="265" width="375" height="201"/>
@@ -257,6 +257,7 @@
                                     <outlet property="myMusicArtistLabel" destination="Xhy-jh-fRx" id="Zqe-mz-eWb"/>
                                     <outlet property="myMusicCoverImageView" destination="hSi-tl-BWW" id="gVH-Be-5wG"/>
                                     <outlet property="myMusicNameLabel" destination="x1E-G4-srk" id="kN9-VF-MGR"/>
+                                    <segue destination="VbW-yE-PFH" kind="show" id="iA6-B0-Uca"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -270,6 +271,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKm-Vm-mzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1973.5999999999999" y="864.91754122938539"/>
+        </scene>
+        <!--Thank You Next Table View Controller-->
+        <scene sceneID="XYd-9W-eSV">
+            <objects>
+                <tableViewController id="VbW-yE-PFH" customClass="ThankYouNextTableViewController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j3P-Ms-Gge">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongTableViewCell" id="YRU-LI-kBr" customClass="ThankYouNextTableViewCell" customModule="Music_Player" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YRU-LI-kBr" id="Xbv-0Y-vfz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VbW-yE-PFH" id="9kf-X4-VuQ"/>
+                            <outlet property="delegate" destination="VbW-yE-PFH" id="6ly-US-Qgu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddJ-Jk-8jq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2943" y="865"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jUg-fn-O6Z">

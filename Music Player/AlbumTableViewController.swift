@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class AlbumTableViewController: UITableViewController {
 
@@ -57,6 +58,8 @@ class AlbumTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        self.view.makeToast("Not Available in this project.", duration: 1.0, position: .center)
     }
     
     // MARK: Private Methods
