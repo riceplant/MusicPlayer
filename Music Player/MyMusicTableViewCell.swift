@@ -16,6 +16,8 @@ class MyMusicTableViewCell: UITableViewCell {
     @IBOutlet weak var myMusicNameLabel: UILabel!
     @IBOutlet weak var myMusicArtistLabel: UILabel!
     
+    var song: Song?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

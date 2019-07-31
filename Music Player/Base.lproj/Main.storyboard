@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chill_image" translatesAutoresizingMaskIntoConstraints="NO" id="91w-iG-B7Q">
-                                <rect key="frame" x="0.0" y="64" width="375" height="201.00000000000006"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="201"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travel_image" translatesAutoresizingMaskIntoConstraints="NO" id="L3r-3H-JMa">
                                 <rect key="frame" x="0.0" y="265" width="375" height="201"/>
@@ -341,34 +341,37 @@
                             <outlet property="delegate" destination="VbW-yE-PFH" id="6ly-US-Qgu"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="KLe-EW-rEX" kind="show" identifier="GoToNowPlaying" id="lem-Jp-8fk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddJ-Jk-8jq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2941.5999999999999" y="864.91754122938539"/>
         </scene>
-        <!--View Controller-->
+        <!--Now Playing View Controller-->
         <scene sceneID="sWj-i0-6DV">
             <objects>
-                <viewController id="KLe-EW-rEX" sceneMemberID="viewController">
+                <viewController id="KLe-EW-rEX" customClass="NowPlayingViewController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jD1-qe-qb6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noPhotoImage" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-11-Gnx">
-                                <rect key="frame" x="67" y="80" width="240" height="240"/>
+                                <rect key="frame" x="67" y="124" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="UXK-Xk-xr8"/>
                                     <constraint firstAttribute="width" constant="240" id="l1F-Gm-1up"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-qL-7XY">
-                                <rect key="frame" x="67" y="373" width="240" height="24"/>
+                                <rect key="frame" x="67" y="417" width="240" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsu-47-WO4">
-                                <rect key="frame" x="67" y="405" width="240" height="18"/>
+                                <rect key="frame" x="67" y="449" width="240" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -389,6 +392,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eVg-e5-6YX"/>
                     </view>
+                    <connections>
+                        <outlet property="nowPlayingAlbumCover" destination="dbk-11-Gnx" id="hCv-wc-op4"/>
+                        <outlet property="nowPlayingArtist" destination="Fsu-47-WO4" id="JdM-92-u1K"/>
+                        <outlet property="nowPlayingTitle" destination="Nma-qL-7XY" id="g0W-eS-wvD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13f-AQ-U2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

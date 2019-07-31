@@ -35,8 +35,19 @@ class ThankYouNextTableViewController: UITableViewController {
         return 60
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToNowPlaying" {
+            let destVC = segue.destination as! NowPlayingViewController
+            destVC.song = sender as? Song
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let song = songs[indexPath.row]
+        let myMusicSegue = "GoToNowPlaying"
+        
+        performSegue(withIdentifier: myMusicSegue, sender: song)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
